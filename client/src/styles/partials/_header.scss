@@ -2,13 +2,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    .logo {
+        display: flex;
+        align-items: center;
+    }
     .menu-icon {
         font-size: 3rem !important;
+    }
+    .cart-icon {
+        font-size: 2.5rem;
     }
     .title-main {
         font-weight: 300;
         font-size: 2.5rem;
     }
+    .btn-auth {
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+   
 }
 
 
