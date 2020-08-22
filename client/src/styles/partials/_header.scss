@@ -12,17 +12,27 @@
         font-size: 3rem !important;
     }
     .cart-icon {
-        font-size: 2.5rem;
+        margin-right: 0.5rem;
+        @include fluid-font(18px,25px);
+        justify-self: flex-start;
     }
     .title-main {
         font-weight: 300;
-        font-size: 2.5rem;
+        padding: 0 1rem;
+        @include fluid-font(20px,25px);
     }
     .btn-auth {
-        font-size: 1.6rem;
         font-weight: 300;
+        @include fluid-font(14px,16px);
+
     }
    
+}
+
+.sidenav {
+       .category {
+        padding: 1rem 3rem;
+   }
 }
 
 
