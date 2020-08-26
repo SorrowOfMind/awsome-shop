@@ -7,6 +7,13 @@ import Button from '@material-ui/core/Button';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Badge from '@material-ui/core/Badge';
 import Sidenav from './Sidenav';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+    typography: {
+        htmlFontSize: 10
+    }
+})
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +24,7 @@ const Header = () => {
 
     return (
         <div>
+            <ThemeProvider theme={theme}>
             <AppBar position="fixed">
                 <Toolbar>
                     <div className="container header">
@@ -24,7 +32,8 @@ const Header = () => {
                             <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleNav}>
                                 <MenuIcon className="menu-icon"/>
                             </IconButton>
-                            <Sidenav isOpen={isOpen} toggleNav={toggleNav} />
+                            
+                                <Sidenav isOpen={isOpen} toggleNav={toggleNav} />
                             <h1 className="title-main">awsomeShop</h1>
                         </div>
                         <div className="utils">
@@ -39,6 +48,7 @@ const Header = () => {
                     </div>
                 </Toolbar>
             </AppBar>
+            </ThemeProvider>
         </div>
     )
 }
