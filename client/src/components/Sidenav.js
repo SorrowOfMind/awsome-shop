@@ -13,15 +13,6 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import ShoppingBasketOutlinedIcon from '@material-ui/icons/ShoppingBasketOutlined';
 
-const sidenavVariants = {
-    hidden: {
-        x: '-100%'
-    },
-    visible: {
-        x: 0
-    }
-}
-
 const Sidenav = ({isOpen, toggleNav}) => {
     const [subIsOpen,
         setSubIsOpen] = useState(false);
@@ -43,26 +34,26 @@ const Sidenav = ({isOpen, toggleNav}) => {
                     <ListItemIcon>
                         <ShoppingBasketOutlinedIcon/>
                     </ListItemIcon>
-                    <ListItemText primary="Product categories"/> 
+                    <ListItemText primary="Categories" className="categories-txt"/> 
                     {subIsOpen ? <ExpandLess/>: <ExpandMore/>}
                 </ListItem>
                 <Collapse in={subIsOpen} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
+                    <List component="div">
                         <ListItem button>
                             <ListItemText primary="Category 1"/>
                         </ListItem>
                     </List>
-                    <List component="div" disablePadding>
+                    <List component="div">
                         <ListItem button>
                             <ListItemText primary="Category 2"/>
                         </ListItem>
                     </List>
-                    <List component="div" disablePadding>
+                    <List component="div">
                         <ListItem button>
                             <ListItemText primary="Category 3"/>
                         </ListItem>
                     </List>
-                    <List component="div" disablePadding>
+                    <List component="div" >
                         <ListItem button>
                             <ListItemText primary="Category 4"/>
                         </ListItem>
