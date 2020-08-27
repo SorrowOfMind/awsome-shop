@@ -32,7 +32,6 @@ const Header = () => {
                             <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleNav}>
                                 <MenuIcon className="menu-icon"/>
                             </IconButton>
-                            
                                 <Sidenav isOpen={isOpen} toggleNav={toggleNav} />
                             <h1 className="title-main">awsomeShop</h1>
                         </div>
