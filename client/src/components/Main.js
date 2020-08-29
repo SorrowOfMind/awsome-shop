@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import products from '../data/products';
-import sloth from '../assets/sloth.png';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
 const Main = () => {
     const [currentPage, setCurrentPage] = useState(1);
+    const currentCategory = useSelector(state => state.category.currentCategory);
     return (
         <>
-        <h2 className="product-category container">Category 1</h2>
+        <h2 className="product-category container">Category {currentCategory}</h2>
         <div className="main-grid container">
-            {products.map(product => (
+            {products.filter(prod => prod.category === currentCategory).map(product => (
                 <Card className="card">
                 <div className={product.name} key={product.id}>
-                    <img src={sloth} className="product-image"/>
+                    <img src={product.img} className="product-image"/>
                 </div>
                 <CardContent className="card-content">
                     <Typography variant="body2" color="textSecondary" component="p">
