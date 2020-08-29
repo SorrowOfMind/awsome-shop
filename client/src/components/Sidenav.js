@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useDispatch} from 'react-redux';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -9,13 +10,20 @@ import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import ShoppingBasketOutlinedIcon from '@material-ui/icons/ShoppingBasketOutlined';
+import {SWITCH_CAT} from '../actions/types';
 
 const Sidenav = ({isOpen, toggleNav}) => {
-    const [subIsOpen,
-        setSubIsOpen] = useState(false);
+    const [subIsOpen, setSubIsOpen] = useState(false);
 
     const toggleSublist = () => {
         setSubIsOpen(!subIsOpen);
+    };
+
+    const dispatch = useDispatch();
+
+    const changeCategory = cat => {
+        dispatch({type: SWITCH_CAT, payload: cat});
+        toggleNav();
     };
 
     return (
@@ -36,23 +44,18 @@ const Sidenav = ({isOpen, toggleNav}) => {
                 </ListItem>
                 <Collapse in={subIsOpen} timeout="auto" unmountOnExit>
                     <List component="div">
-                        <ListItem button>
+                        <ListItem button onClick={() => changeCategory(1)}>
                             <ListItemText primary="Category 1"/>
                         </ListItem>
                     </List>
                     <List component="div">
-                        <ListItem button>
+                        <ListItem button onClick={() => changeCategory(2)}>
                             <ListItemText primary="Category 2"/>
                         </ListItem>
                     </List>
                     <List component="div">
-                        <ListItem button>
+                        <ListItem button onClick={() => changeCategory(3)}>
                             <ListItemText primary="Category 3"/>
-                        </ListItem>
-                    </List>
-                    <List component="div" >
-                        <ListItem button>
-                            <ListItemText primary="Category 4"/>
                         </ListItem>
                     </List>
                 </Collapse>
