@@ -50,11 +50,6 @@ const Sidenav = ({isOpen, toggleNav}) => {
                             <ListItemText primary="Category 3"/>
                         </ListItem>
                     </List>
-                    <List component="div" >
-                        <ListItem button>
-                            <ListItemText primary="Category 4"/>
-                        </ListItem>
-                    </List>
                 </Collapse>
             </List>
         </Drawer>
