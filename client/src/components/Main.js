@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
+import {Link} from 'react-router-dom';
 import products from '../data/products';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -13,12 +14,12 @@ const Main = () => {
         <h2 className="product-category container">Category {currentCategory}</h2>
         <div className="main-grid container">
             {products.filter(prod => prod.category === currentCategory).map(product => (
-                <Card className="card">
-                <div className={product.name} key={product.id}>
+                <Link to={`/products/${product.id}`} key={product.id}><Card className="card">
+                <div className={product.name}>
                     <img src={product.img} className="product-image"/>
                 </div>
                 <CardContent className="card-content">
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    <Typography variant="body2" color="textSecondary" component="div">
                         <p className="product-name">{product.name}</p>
                         <p className="product-price">{product.price}$</p>
                         <div className="product-actions">
@@ -27,6 +28,7 @@ const Main = () => {
                     </Typography>
                 </CardContent>
                 </Card>
+                </Link>
             ))}
         </div>
         </>
