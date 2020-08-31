@@ -5,7 +5,7 @@ export default  [
         price: 100,
         rating: 5,
         reviews: 10,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
         category: 1
     },
     {
@@ -15,7 +15,7 @@ export default  [
         rating: 5,
         reviews: 10,
         category: 1,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export default  [
         rating: 5,
         reviews: 10,
         category: 1,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ export default  [
         rating: 5,
         reviews: 10,
         category: 1,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ export default  [
         rating: 5,
         reviews: 10,
         category: 1,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
     },
     {
         id: 6,
@@ -51,7 +51,7 @@ export default  [
         rating: 5,
         reviews: 10,
         category: 1,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
     },
     {
         id: 7,
@@ -60,7 +60,7 @@ export default  [
         rating: 5,
         reviews: 10,
         category: 1,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
     },
     {
         id: 8,
@@ -69,7 +69,7 @@ export default  [
         rating: 5,
         reviews: 10,
         category: 1,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
     },
     {
         id: 9,
@@ -78,7 +78,7 @@ export default  [
         rating: 5,
         reviews: 10,
         category: 1,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
     },
     {
         id: 10,
@@ -87,7 +87,7 @@ export default  [
         rating: 5,
         reviews: 10,
         category: 1,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
     },
     {
         id: 11,
@@ -96,7 +96,7 @@ export default  [
         rating: 5,
         reviews: 10,
         category: 1,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
     },
     {
         id: 12,
@@ -105,7 +105,7 @@ export default  [
         rating: 5,
         reviews: 10,
         category: 1,
-        img: './images/sloth.png',
+        img: '../images/sloth.png',
     },
     {
         id: 13,
@@ -114,7 +114,7 @@ export default  [
         rating: 5,
         reviews: 13,
         category: 2,
-        img: './images/cat.png',
+        img: '../images/cat.png',
     },
     {
         id: 14,
@@ -123,7 +123,7 @@ export default  [
         rating: 5,
         reviews: 13,
         category: 2,
-        img: './images/cat.png',
+        img: '../images/cat.png',
     },
     {
         id: 15,
