@@ -1,0 +1,18 @@
+.home {
+    margin-top: 10rem;
+    font-size: 2rem;
+    .welcome-box {
+        font-size: 4rem;
+        color: #fff;
+        padding: 5%;
+        background-color: #ed4b82;
+        .welcome-subtext {
+            font-size: 2rem;
+        }
+        .welcome-btn {
+            margin-top: 5%;
+            font-size: 2rem;
+            float: right;
+        }
+    }
+}

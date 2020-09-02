@@ -31,12 +31,14 @@ const Sidenav = ({isOpen, toggleNav}) => {
     return (
         <Drawer className="sidenav" open={isOpen} onClose={toggleNav}>
             <List component="ul">
-                <ListItem button className="category">
-                    <ListItemIcon>
-                        <HomeOutlinedIcon/>
-                    </ListItemIcon>
-                    <ListItemText primary="Home"/>
-                </ListItem>
+                <Link to='/'>
+                    <ListItem button className="category" onClick={toggleNav}>
+                        <ListItemIcon>
+                            <HomeOutlinedIcon/>
+                        </ListItemIcon>
+                        <ListItemText primary="Home"/>
+                    </ListItem>
+                </Link>
                 <ListItem button className="category" onClick={toggleSublist}>
                     <ListItemIcon>
                         <ShoppingBasketOutlinedIcon/>

@@ -12,3 +12,9 @@ a {
     max-width: 1368px;
     margin: 0 auto;
 }
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
